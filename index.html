@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phoenix</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo/phoenix.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="main-nav-bar" id="nb" onmouseover="show()" onmouseout="show()">
+        <div class="nav-bar" id="rnb">
+
+            <button class="but" style="margin-top:60px;background-image: url('logo/ho-wh.png');"></button>
+            <button class="but"></button>
+            <button class="but"></button>
+            <button class="but"></button>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="div">
+
+        <div class="imd i" style="background-image:url('images/2.png');" id="bg">
+            <div class="imd" style="background-image:url('images/3.png');" id="moon">
+                <div class="imd" style="background-image:url('images/4.png');" id="mou">
+                    <div class="imd" style="background-image:url('images/5.png');display:flex;z-index:1;" id="ro">
+                        <div class="imd" style="background-image:url('images/6.png');display:flex;z-index:1;" id="i6">
+                            <div class="imd" style="background-image:url('images/7.png');display:flex;z-index:1;" id="i7">
+                                <div class="imd" style="background-image:url('images/8.png');display:flex;z-index:1;" id="i8">
+
+                                    <div class="imd" id="tex" style="font-size:10rem;color:white;text-align:center;justify-content:center;align-items:center;display:flex;">
+                                        <div class="imd" style="background-image:url('logo/logo.png');background-size: contain;background-position: center;width:300px;height:300px;background-repeat: no-repeat;">
+
+                                        </div>
+                                        <!-- PHOENIX -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div style="width:100%;height:100vh;display:flex;position: relative;z-index:999;background-color:#ff7f87;padding: 20px;box-sizing: border-box;">
+        <div class="imd" id="moon2" style="background-image:url('logo/moon.gif');background-size: contain;background-position: center;width:100px;height:100px;background-repeat: no-repeat;">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+        var i = 1;
+        var bg = document.getElementById("bg");
+        var moon = document.getElementById("moon");
+
+        var mou = document.getElementById("mou");
+
+        var ro = document.getElementById("ro");
+        var tex = document.getElementById("tex");
+        var i6 = document.getElementById("i6");
+        var i7 = document.getElementById("i7");
+        var i8 = document.getElementById("i8");
+
+
+
+        window.addEventListener('scroll', function() {
+            var scroll = window.scrollY;
+            if (window.innerWidth <= 600) {
+                bg.style.backgroundPositionX = 50 + -scroll * 0.1 + "%";
+
+            } else {
+                bg.style.backgroundPositionX = scroll * 0.15 + "px";
+
+            }
+            mou.style.backgroundPositionX = -(scroll * 0.100) + "px";
+            moon.style.backgroundPositionX = -(scroll * 0.5) + "px";
+            ro.style.backgroundPositionY = scroll * 0.20 + "px";
+            tex.style.marginTop = (scroll * 0.15) + "px";
+            i6.style.marginTop = (scroll * 0.5) + "px";
+            i7.style.marginTop = -(scroll * 0.05) + "px";
+            i8.style.marginTop = (scroll * 0.01) + "px";
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
